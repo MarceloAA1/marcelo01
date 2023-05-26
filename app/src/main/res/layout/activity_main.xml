@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/b" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="44dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:baselineAligned="false"
+        android:hint="@string/nome_do_aluno"
+        android:gravity="center"
+        android:textColorHint="#000000"
+        tools:ignore="TextFields,VisualLintTextFieldSize,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:backgroundTint="#75243388"
+        android:text="@string/pesquisar"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:layout_margin="75dp"
+        android:background="#9CFFFFFF"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:visibility="visible" />
+
+
+</LinearLayout>
