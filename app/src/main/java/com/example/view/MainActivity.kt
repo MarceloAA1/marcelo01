@@ -9,12 +9,13 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    // Classe interna que representa um aluno
 
     class Aluno {
-        val curso: String = "criação de aplicativo para android"
-        val professor: String = "Matheus"
-        val turno: String = "matutino"
-        val nome: String = "Marcelo"
+        val curso: String = "criação de aplicativo para android"// Curso do aluno
+        val professor: String = "Matheus"// Nome do professor
+        val turno: String = "matutino"// Turno do aluno
+        val nome: String = "Marcelo"// Nome do aluno1
 
     }
     @SuppressLint("SetTextI18n")
@@ -22,18 +23,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button = findViewById<Button>(R.id.button)
-        val editText = findViewById<EditText>(R.id.editText)
-        val textView = findViewById<TextView>(R.id.textView)
+        // Obtenção das referências aos elementos da interface do usuário
+        val button = findViewById<Button>(R.id.button)// Botão
+        val editText = findViewById<EditText>(R.id.editText)// Campo de edição de texto
+        val textView = findViewById<TextView>(R.id.textView)// Texto exibido
 
+        // Configuração do ouvinte de clique para o botão
         button.setOnClickListener {
-            editText.text.toString()
-            val aluno = pesquisarAluno()
+            editText.text.toString() // Converte o texto do campo de edição para uma string (mas não faz nada com essa string)
+            val aluno = pesquisarAluno() // Obtém um objeto Aluno através do método pesquisarAluno()
+
+            // Atualiza o texto exibido no textView com as informações do aluno
             textView.text = "Nome: ${aluno.nome}\nTurno: ${aluno.turno}\nProfessor: ${aluno.professor}\nCurso: ${aluno.curso}"
-            textView.visibility = View.VISIBLE
+            textView.visibility = View.VISIBLE // Torna o textView visível
         }
     }
 
+    // Método privado que simula a pesquisa de um aluno
     private fun pesquisarAluno(): Aluno {
         // Aqui você pode implementar a lógica de pesquisa do aluno
         // Por enquanto, vamos simplesmente retornar um aluno aleatório
